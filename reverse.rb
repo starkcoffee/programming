@@ -3,6 +3,7 @@
 # printed in reverse
 
 def reverse(list)
+  list.reverse!
   return list
 end
 
