@@ -2,12 +2,12 @@
 # goal is when you run `ruby reverse.rb`, you should see the numbers
 # printed in reverse
 
-def reverse(list)
+def print_reverse(list)
   	reversed = []
   	for i in 0..(list.length()-1)
   		reversed.push(list[list.length() - i - 1])
   	end
-  reversed
+  return reversed
 end
 
 def reverse1(list)
@@ -16,7 +16,7 @@ def reverse1(list)
 		list[i] = list[list.length()- i - 1]
 		list[list.length() - i - 1] = temp
 	end
-    list
+	return list
 end
 
 def reverse2(list)
@@ -32,7 +32,7 @@ end
 #below this should print the list backwards, print it backwards again, then print it forwards, then backwards again (for a total of 4 times)
 list = [1,2,3]
 
-reversed_list = reverse(list)
+reversed_list = print_reverse(list)
 puts reversed_list
 
 reversed_list = reverse1(list)
