@@ -1,18 +1,4 @@
 
-var the_board = [
-  [ "", "", ""],
-  [ "", "", ""],
-  [ "", "", ""],
-]
-
-function make_move(board, x, y){
-  board[x][y] = "X";
-  return board;
-}
-
-console.log(make_move(the_board, 1,1))
-
-
 var example_text = [
   ["The", "quick", "brown", "fox"],
   ["jumped", "over", "the", "rabbit"],
@@ -25,11 +11,15 @@ function style_paragraph(text) {
   for(i=0; i<text.length; i++){
 
     for(j=0; j< text[i].length; j++){
-      console.log(i + ":" +  j + ":" + text[i][j]);
+      styled_text += text[i][j];
     } 
   }
+
+  return styled_text;
 }
 
-//style_paragraph(example_text);
+var result = style_paragraph(example_text);
+
+console.log(result);
 
 
